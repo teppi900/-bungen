@@ -1,20 +1,31 @@
 package a2;
-import java.util.Scanner;
-import java.io.File;
+
+
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class A2 {
 	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		double[]konto=new double[5];
-		for (int i = 0; i < konto.length; i++) {
-			System.out.println("Kontostand "+(i+1)+": ");
-			double k=sc.nextDouble();
-			konto[i]=k;
+		try {	
+			BufferedReader in=new BufferedReader(new FileReader("D:Kontostaende.txt"));
+			while(in.ready()){
+				try{
+				String a=in.readLine();
+				Character ch=new Character(',');
+				Character ch2=new Character('.');
+				a=a.replace( ch , ch2);
+				double zahl=Double.parseDouble(a);
+				if(zahl>1000.0){
+					System.out.println(zahl);
+				}
+				}catch(NumberFormatException e){
+					System.out.println(e);
+				}
+			}
+			in.close();
+		} catch (Exception e) {
+			System.out.println(e);// TODO: handle exception
 		}
-		
-		for (int i = 0; i < konto.length; i++) {
-			System.out.println(konto[i]);
-		}
-		System.out.println(konto[2]);
+
 	}
 }
