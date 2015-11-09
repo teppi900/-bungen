@@ -6,9 +6,10 @@ public class A3 {
 public static void main(String[] args) {
 		
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Zugehörigkeit: ");
+		System.out.println("Zugehörigkeit: ");							//scan
 		int time=sc.nextInt();
-		switch (time) {
+		sc.close();														//close sc
+		switch (time) {								
 		case 0:
 			System.out.println("Arbeite");
 			break;
@@ -36,6 +37,6 @@ public static void main(String[] args) {
 		default:
 			System.out.println("30 Tage");
 			break;
-		}
-	}
-}
+		}																//end of switch
+	}																	//end of main()
+}																		//end of A3

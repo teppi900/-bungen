@@ -7,25 +7,25 @@ import java.io.FileReader;
 public class A2 {
 	public static void main(String[] args) {
 		try {	
-			BufferedReader in=new BufferedReader(new FileReader("D:Kontostaende.txt"));
-			while(in.ready()){
+			BufferedReader in=new BufferedReader(new FileReader("D:Kontostaende.txt"));		//BufferedReader
+			while(in.ready()){																//while buffer not empty==true
 				try{
-				String a=in.readLine();
-				Character ch=new Character(',');
+				String a=in.readLine();														//readLine
+				Character ch=new Character(',');	
 				Character ch2=new Character('.');
-				a=a.replace( ch , ch2);
-				double zahl=Double.parseDouble(a);
-				if(zahl>1000.0){
+				a=a.replace( ch , ch2);														//convert "," to "."
+				double zahl=Double.parseDouble(a);											//convert String to double
+				if(zahl>1000.0){															//print numbers over 1000.0
 					System.out.println(zahl);
-				}
+				}																			//end of if
 				}catch(NumberFormatException e){
 					System.out.println(e);
 				}
-			}
-			in.close();
+			}																				//end of while
+			in.close();																		//close BufferedReader
 		} catch (Exception e) {
 			System.out.println(e);// TODO: handle exception
 		}
 
-	}
-}
+	}																						//end of main()
+}																							//end of A2

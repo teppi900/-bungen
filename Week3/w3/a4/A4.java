@@ -2,24 +2,44 @@ package a4;
 import java.util.Scanner;
 public class A4 {
 	public static void main(String[] args) {
-		int[] i=new int[5];
+		
 		Scanner sc=new Scanner(System.in);
-		int max;
-		int min;
-		
-		
-		for (int j = 0; j < i.length; j++) {
-			System.out.println("Zahl "+(j+1)+": ");
-			double z=sc.nextInt();
-		}
-		for (int j = 0; j < i.length-1; j++) {
-			if (i[j]<i[j+1]) {
-				min=i[j];
+		double max;
+		double min;
+		System.out.println("Wie viele Kontostände?");			// length of array
+		int konto=sc.nextInt();
+		double[]account=new double[konto];						
+		double[]oldAccount;
+		for (int j = 0; j <account.length; j++) {				// assign variable to the array
+			System.out.println("Kontostand "+(j+1)+": ");		
+			double z=sc.nextDouble();							
+			account[j]=z;										
+		}														
+		oldAccount=account.clone();								// cloning account
+		sc.close();
+		double x;
+		for (int j = 0; j < account.length-1; j++) {			//bubblesort
+			if (account[j]>account[j+1]) {
+				x=account[j];
+				account[j]=account[j+1];
+				account[j+1]=x;
 			}
-			System.out.println(min);
 		}	
-			
-		int mittel=(i[0]+i[1]+i[2]+i[3]+i[4]+i[5])/i.length;	
+		min=account[0];											//calculation and stuff
+		max=account[account.length-1];
+		double sum=0;												
+		for (int j = 0; j < account.length; j++) {
+			sum=sum+account[j];
+		}
+		double mittel = sum/account.length;
+		
+		for (int j = 0; j < account.length; j++) {				//print account balance, min, max and the average value
+			System.out.println("Kontostand: "+oldAccount[j]);	
+		}
+		System.out.println("min: "+min);
+		System.out.println("max: "+max);
+		System.out.println("mittel "+mittel);
 		
 	}
+
 }
