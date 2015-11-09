@@ -7,17 +7,18 @@ public class A1 {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
 		try {
-			System.out.println("Alter: ");
+			System.out.println("Alter: ");								//ask for age
 			int alter=sc.nextInt();
-			if(alter<16){
+			sc.close();													//close sc
+			if(alter<16){												//baby
 				System.out.println("Geh nach Hause");
-			}
-			 if(alter<=17){
+			}															//end of if
+			 if(alter<=17){												//teenager
 				 if (alter>=16){
 					 System.out.println("Bier und Wein");
-				 }
-			 }
-			 else{
+				 }														//end of if
+			 }															//end of if
+			 else{														//adult
 				 System.out.println("Bier, Schnaps und Wein");
 			 }
 			 System.exit(0);
@@ -26,5 +27,5 @@ public class A1 {
 			System.out.println(e);
 		}
 		
-	}
-}
+	}																	//end of main()
+}																		//end of A1

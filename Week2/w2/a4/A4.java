@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class A4 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Zahl zwischen 1-6");
+		System.out.println("Zahl zwischen 1-6");				//scan
 		int zahl=sc.nextInt();
+		sc.close();												//close sc
 		switch (zahl) {
 		case 1:
 			System.out.println("sehr gut");
@@ -35,6 +36,6 @@ public class A4 {
 		default:
 			System.out.println("Geht nicht");
 			break;
-		}
-	}
-}
+		}														//end of switch	
+	}															//end of main()
+}																//end of A4
