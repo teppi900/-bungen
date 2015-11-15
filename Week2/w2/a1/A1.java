@@ -24,7 +24,7 @@ public class A1 {
 			 System.exit(0);
 		
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		}
 		
 	}																	//end of main()

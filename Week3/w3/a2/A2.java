@@ -15,11 +15,11 @@ public class A2 {
 				Character ch2=new Character('.');
 				a=a.replace( ch , ch2);														//convert "," to "."
 				double zahl=Double.parseDouble(a);											//convert String to double
-				if(zahl>1000.0){															//print numbers over 1000.0
+				if(zahl>100.0){															//print numbers over 1000.0
 					System.out.println(zahl);
 				}																			//end of if
 				}catch(NumberFormatException e){
-					System.out.println(e);
+					e.printStackTrace();
 				}
 			}																				//end of while
 			in.close();																		//close BufferedReader
