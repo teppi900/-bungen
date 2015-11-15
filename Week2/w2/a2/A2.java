@@ -22,7 +22,7 @@ public class A2 {
 				System.out.println(s1+" "+s2);						
 			}														//end of else
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		}
 		
 		

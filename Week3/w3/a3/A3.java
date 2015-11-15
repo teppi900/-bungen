@@ -25,7 +25,7 @@ public class A3 {
 		}																				//end of while
 		in.close();																		//close BufferedReader
 		}catch(Exception e){
-			System.out.println(e);
+			e.printStackTrace();
 		}
 		
 		
