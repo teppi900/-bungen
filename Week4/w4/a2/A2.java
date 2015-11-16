@@ -30,8 +30,8 @@ public class A2 {
 				}																						//end of if(test<=90)
 				else{																					//if test larger than 90 
 					rest=test-90;																		//we will calculate the difference between test and 'Z'
-					while (rest+65>90) {																//while test+'A' still larger than 'Z'
-						rest=(rest+65)-90;																//assign (old rest+'A')-'Z' to rest	
+					while (rest+64>90) {																//while test+'A' still larger than 'Z'
+						rest=(rest+64)-90;																//assign (old rest+'A')-'Z' to rest	
 					}																					//end of while (rest+65>Z90)
 					code=64+rest;																		//65-1 because our calculation cant get 0 as result
 				}																						//end of else
@@ -55,8 +55,8 @@ public class A2 {
 					}																					//end of if(test<=122)
 					else{
 						rest=(asciiNr+verschiebung)-122;
-						while (rest+97>122) {
-							rest=(rest+97)-122;
+						while (rest+96>122) {
+							rest=(rest+96)-122;
 						}																				//end of while (rest+97>122)
 						code=96+rest;
 					}																					//end of else
