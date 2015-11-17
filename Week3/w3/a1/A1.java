@@ -6,14 +6,14 @@ public class A1 {
 		Scanner sc=new Scanner(System.in);
 		double[]konto=new double[5];
 		for (int i = 0; i < konto.length; i++) {						
-			System.out.println("Kontostand "+(i+1)+": ");				//ask for account balance
+			System.out.println("Kontostand "+(i+1)+": ");	//ask for account balance
 			double k=sc.nextDouble();
 			konto[i]=k;													
-		}															//end of for
-		sc.close();														//close sc
+		}						//end of for
+		sc.close();						//close sc
 		for (int i = 0; i < konto.length; i++) {						
-			System.out.println(konto[i]);								//print all konto
-		}															//end of for
-		System.out.println(konto[2]);									//print konto[2]
-	}																//end of main		
-}																	//end of A1
+			System.out.println(konto[i]);			//print all konto
+		}						//end of for
+		System.out.println(konto[2]);				//print konto[2]
+	}							//end of main		
+}								//end of A1
