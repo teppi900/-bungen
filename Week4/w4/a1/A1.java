@@ -7,7 +7,7 @@ public class A1 {
 		
 		System.out.println("Part 1:");
 		
-		for (int i = 0; i < 128; i++) {											//ASCII 
+		for (int i = 0; i < 128; i++) {								//ASCII 
 			System.out.print((i)+": "+(char)i+", ");
 		}
 		System.out.println("");
@@ -15,8 +15,8 @@ public class A1 {
 		System.out.println("Part 2:");			
 		for (int i = 0; i <128; i++) {
 			Character ch=(char)i;
-			if (Character.isUpperCase(ch)&&Character.isLetter(ch)) {			// Gross und Buchstabe
-				System.out.println(ch.hashCode()+": "+ch);						// Value + char
+			if (Character.isUpperCase(ch)&&Character.isLetter(ch)) {			// Gross && Buchstabe
+				System.out.println(ch.hashCode()+": "+ch);				// Value + char
 			}
 			
 				
