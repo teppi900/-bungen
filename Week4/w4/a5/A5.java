@@ -62,7 +62,7 @@ public class A5 {
 			//Netto to wert3
 			for (int i = 0; i < wert1.size(); i++) {
 				double ergebnis=wert1.get(i)*(1+wert2.get(i)/100);
-				ergebnis=Math.round(ergebnis*100)/100.0;										//round off	
+				ergebnis=Math.round(ergebnis*100)/100.0;							//round off	
 				wert3.add(i, ergebnis);
 			}
 			//Netto to list
