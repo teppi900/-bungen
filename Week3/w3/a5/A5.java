@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class A5 {
 	
+	private static boolean swapped;
 	private static double []account;
 	private static double []oldAccount;
 	private static double max;
@@ -40,14 +41,20 @@ public class A5 {
 		}																//end of rechner()
 		
 		public static void bubble(){									//bubble method
-				double x;
-				for (int j = 0; j < account.length-1; j++) {			
-					if (account[j]>account[j+1]) {
-						x=account[j];
-						account[j]=account[j+1];
-						account[j+1]=x;
-					}													//end of if
-				}														//end of for
+			double temp;
+			do {													//bubble
+				int n=account.length;
+				swapped=false;
+				for (int i = 0; i < n-1; i++) {
+					if (account[i]>account[i+1]) {
+						temp=account[i];
+						account[i]=account[i+1];
+						account[i+1]=temp;
+						swapped=true;
+					}												//end of if (account[i]>account[i+1])
+				}													//end of for (int i = 0; i < n-1; i++) 
+				n=n-1;
+			} while (swapped=true);									//end of do while(swapped=true)								//end of for
 		}																//end of bubble()
 		public static void main(String[] args) {						//main()
 			try {
