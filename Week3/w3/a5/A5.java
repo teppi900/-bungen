@@ -11,7 +11,7 @@ public class A5 {
 	private static Scanner sc=new Scanner(System.in);
 	
 		public static void start(){						//start method
-			System.out.println("Wie viele Kontost√§nde?");			//amount of accounts
+			System.out.println("Wie viele Kontost‰nde?");			//amount of accounts
 			int konto=sc.nextInt();
 			account=new double[konto];
 			for (int j = 0; j <account.length; j++) {			//assign variable to array
@@ -40,15 +40,25 @@ public class A5 {
 		}								//end of rechner()
 		
 		public static void bubble(){						//bubble method
-				double x;
-				for (int j = 0; j < account.length-1; j++) {			
-					if (account[j]>account[j+1]) {
-						x=account[j];
-						account[j]=account[j+1];
-						account[j+1]=x;
-					}					//end of if
-				}						//end of for
-		}								//end of bubble()
+			boolean swapped;
+			double temp;
+			int n = account.length;
+					  do{
+					    swapped = false;
+					    for (int i=0; i<n-1; ++i){
+					      if (account[i] > account[i+1]){
+					        temp=account[i];
+					        account[i]=account[i+1];
+					        account[i+1]=temp;
+					        swapped = true;
+					      } // ende if
+					    } // ende for
+					    n = n-1;
+					  } while (swapped == true);
+					  for (int i = 0; i < account.length; i++) {
+						System.out.println(account[i]);
+					}
+		}
 		public static void main(String[] args) {				//main()
 			try {
 				start();

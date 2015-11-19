@@ -6,7 +6,7 @@ public class A4 {
 		Scanner sc=new Scanner(System.in);
 		double max;
 		double min;
-		System.out.println("Wie viele Kontost√§nde?");		// length of array
+		System.out.println("Wie viele Kontost‰nde?");		// length of array
 		int konto=sc.nextInt();
 		double[]account=new double[konto];						
 		double[]oldAccount;
@@ -17,14 +17,24 @@ public class A4 {
 		}														
 		oldAccount=account.clone();				// cloning account
 		sc.close();
-		double x;
-		for (int j = 0; j < account.length-1; j++) {		//bubblesort
-			if (account[j]>account[j+1]) {
-				x=account[j];
-				account[j]=account[j+1];
-				account[j+1]=x;
-			}
-		}	
+		boolean swapped;
+		double temp;
+		int n = account.length;
+				  do{
+				    swapped = false;
+				    for (int i=0; i<n-1; ++i){
+				      if (account[i] > account[i+1]){
+				        temp=account[i];
+				        account[i]=account[i+1];
+				        account[i+1]=temp;
+				        swapped = true;
+				      } // ende if
+				    } // ende for
+				    n = n-1;
+				  } while (swapped == true);
+				  for (int i = 0; i < account.length; i++) {
+					System.out.println(account[i]);
+				}
 		min=account[0];						//calculation and stuff
 		max=account[account.length-1];
 		double sum=0;												
