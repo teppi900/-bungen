@@ -2,7 +2,7 @@ package a4;
 import java.util.Scanner;
 public class A4 {
 	public static void main(String[] args) {
-		boolean swapped;
+		
 		Scanner sc=new Scanner(System.in);
 		double max;
 		double min;
@@ -17,8 +17,10 @@ public class A4 {
 		}														
 		oldAccount=account.clone();								// cloning account
 		sc.close();
+		boolean swapped;
 		double temp;
 		do {													//bubble
+			
 			int n=account.length;
 			swapped=false;
 			for (int i = 0; i < n-1; i++) {
@@ -30,7 +32,7 @@ public class A4 {
 				}												//end of if (account[i]>account[i+1])
 			}													//end of for (int i = 0; i < n-1; i++) 
 			n=n-1;
-		} while (swapped=true);									//end of do while(swapped=true)
+		} while (swapped==true);									//end of do while(swapped=true)
 		min=account[0];											//calculation and stuff
 		max=account[account.length-1];
 		double sum=0;												
