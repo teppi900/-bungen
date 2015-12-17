@@ -1,6 +1,6 @@
 package w7;
 
-public class Mitarbeiter {
+public abstract class Mitarbeiter {
 	protected int mitArbLd;
 	protected String name;
 	protected String sld;
