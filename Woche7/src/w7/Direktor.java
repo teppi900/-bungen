@@ -1,7 +1,7 @@
 package w7;
 
 public class Direktor extends Manager {
-	double budget;
+	private double budget;
 	public Direktor(int mitarbld,String name,String sld, double gehalt,String abtName,double budget){
 		super(mitarbld, name, sld, gehalt, abtName);
 		this.budget=budget;
