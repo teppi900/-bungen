@@ -1,5 +1,8 @@
 package w10;
 
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -24,5 +27,14 @@ public class HashSetVersion {
 			System.out.println(zahl);
 		}
 		sc.close();
+		//Hashset can't be sorted
+		ArrayList<Integer>sorted=new ArrayList<Integer>(set);
+		Collections.sort(sorted);
+		System.out.println("Sorted");
+		
+		for (int zahl:sorted) {
+			System.out.print(zahl+" ");
+		}
+		
 	}
 }

@@ -1,6 +1,5 @@
 package w9;
 
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -23,9 +22,8 @@ public class Main {
 				System.out.println(i+": "+length);
 				
 			}
-		String start ="1.1."+lDate2.getYear();
+			
 		String end="1.5."+lDate2.getYear();
-		LocalDate startDate=LocalDate.parse(start, dtfm);
 		LocalDate endDate=LocalDate.parse(end, dtfm);
 		
 		System.out.println("Day of the year: "+endDate.getDayOfYear());
